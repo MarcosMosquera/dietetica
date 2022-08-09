@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	text-decoration: none;
+	list-style-type: none;
+
+	font-family: "Nunito", sans-serif;
+}
+
+.container {
+	padding: 0 80px;
+}
+
+.navContainer,
+.header-ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	background-color: #5b6;
+
+	padding: 10px 0;
+}
+
+.header-ul__li {
+	padding: 0 20px;
+}
+
+.logo {
+	font-size: 2rem;
+	font-weight: 700;
+	padding-left: 20px;
+}
+
+.navContainer a {
+	color: #fff;
+}
+
+.nav-ul {
+	display: flex;
+	justify-content: space-around;
+
+	padding: 10px 0;
+
+	font-weight: 300;
+}
+
+.nav-ul a {
+	color: #555;
+}
+
+.imgContainer {
+	height: 300px;
+	overflow: hidden;
+}
+
+.wallpaper {
+	height: 100%;
+	background-image: url(../images/nuts-wallpaper.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.products {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: center;
+	gap: 100px;
+}
+
+.product__img {
+	width: 100%;
+	object-fit: cover;
+}
+
+section {
+	padding: 80px 0;
+}
+
+#cart-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 50px 0;
+}
+
+.total-price {
+	padding-top: 40px;
+}

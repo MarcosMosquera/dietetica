@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="css/styles.css" />
+
+		<title>Dietética</title>
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="navContainer">
+				<p class="logo"><a href="#">Dietética</a></p>
+				<form class="searchBar">
+					<input
+						type="search"
+						name="search"
+						id=""
+						placeholder="¿Qué estás buscando?"
+					/>
+					<button type="submit">Buscar</button>
+				</form>
+
+				<ul class="header-ul">
+					<li class="header-ul__li"><a href="#">Ayuda</a></li>
+					<li class="header-ul__li">
+						<a href="#">Carrito (<span id="cart-count">0</span>)</a>
+					</li>
+					<li class="header-ul__li"><a href="#">Cuenta</a></li>
+				</ul>
+			</div>
+
+			<div>
+				<ul class="nav-ul">
+					<li class="nav-ul__li">
+						<a href="#">Alimentos naturales</a>
+					</li>
+					<li class="nav-ul__li"><a href="#">Despensa</a></li>
+					<li class="nav-ul__li">
+						<a href="#">Bebidas e infusiones</a>
+					</li>
+					<li class="nav-ul__li">
+						<a href="#">Cosmética y cuidado de salud</a>
+					</li>
+					<li class="nav-ul__li">
+						<a href="#">Suplementos naturales</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="imgContainer">
+				<div class="wallpaper"></div>
+			</div>
+
+			<section>
+				<div class="products container" id="productsContainer"></div>
+			</section>
+
+			<section>
+				<div class="container" id="cart-container"></div>
+				<div class="container total-price">
+					<h2>Precio total: $ <span id="total-price">0</span></h2>
+				</div>
+			</section>
+		</main>
+
+		<!-- SCRIPT -->
+		<script src="scripts/scripts.js"></script>
+	</body>
+</html>
