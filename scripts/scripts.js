@@ -6,10 +6,10 @@ const cartContainer = document.getElementById('cart-container');
 
 // Productos
 let productStock = [
-    {id: 1, name: "Almendras", type: "Fruto seco", price: 460, amount: "100g", img: "images/peanuts.png"},
+    {id: 1, name: "Almendras", type: "Fruto seco", price: 460, amount: "100g", img: "images/almonds.png"},
     {id: 2, name: "Maní", type: "Fruto seco", price: 460, amount: "100g", img: "images/peanuts.png"},
-    {id: 3, name: "Castañas de Cajú", type: "Fruto seco", price: 490, amount: "100g", img: "images/peanuts.png"},
-    {id: 4, name: "Pistachos", type: "Fruto seco", price: 470, amount: "100g", img: "images/peanuts.png"}
+    {id: 3, name: "Castañas de Cajú", type: "Fruto seco", price: 490, amount: "100g", img: "images/cashew.png"},
+    {id: 4, name: "Pistachos", type: "Fruto seco", price: 470, amount: "100g", img: "images/pistachios.png"}
 ];
 
 // Contador de productos en el carrito
