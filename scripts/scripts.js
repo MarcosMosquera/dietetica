@@ -29,21 +29,27 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 });
 
+
 // Función para añadir productos al HTML
-productStock.forEach((product) => {
+// ===================================================================================================================
+productStock?.forEach((product) => {
     // Creo un div
     const div = document.createElement('div');
     // Al div le agrego un class existente
     div.classList.add('product');
     // Inyecto HTML
     div.innerHTML = `
-        <img class="product__img" src="${product.img}" alt="">
-        <h3 class="product__title">${product.name}</h3>
-        <p class="product__price">$ ${product.price}</p>
-        <button id="add${product.id}" class="add-button">Agregar al carrito</button>
+        <div class="product__img-container">
+            <img class="product__img" src="${product.img}" alt="">
+        </div>
+        <div class="product__info">
+            <h3 class="product__title">${product.name}</h3>
+            <p class="product__price">$ ${product.price}</p>
+            <button id="add${product.id}" class="add-button">Agregar al carrito</button>
+        </div>
     `;
     // Se lo añado al elemento padre
-    productsContainer.appendChild(div);
+    productsContainer?.appendChild(div);
 
     // Botón
     const button = document.getElementById(`add${product.id}`);
@@ -53,16 +59,20 @@ productStock.forEach((product) => {
     });
 });
 
+
 // Función para añadir productos al carrito
+// ===================================================================================================================
 const addToCart = (prodId) => {
     // Trae el producto con la ID que coincida con el prodId que reciba por parámetro
-    const item = productStock.find((product) => product.id === prodId);
+    const item = productStock?.find((product) => product.id === prodId);
     // Añade item al array del carrito
     cart.push(item);
     cartRefresh();
 };
 
+
 // Función para eliminar productos del carrito
+// ===================================================================================================================
 const deleteFromCart = (prodId) => {
     // Trae el producto con la ID que coincida con el prodId que reciba por parámetro
     const item = cart.find((product) => product.id === prodId);
@@ -74,19 +84,21 @@ const deleteFromCart = (prodId) => {
     cartRefresh();
 };
 
+
 // Función para actualizar el carrito
+// ===================================================================================================================
 const cartRefresh = () => {
-    // Para que no se acumulen grupos de productos, primero vaciará el array.
+    // Para que no se acumulen grupos de productos, primero vaciará el array
     cartContainer.innerHTML = "";
 
     cart.forEach((product) => {
         const div = document.createElement('div');
         div.className = ('product-in-cart');
         div.innerHTML = `
-            <p>${product.name}</p>
-            <p>$ ${product.price}</p>
-            <p>Cantidad: <span id="amount">${product.amount}</span></p>
-            <button class="delete-btn" onclick="deleteFromCart(${product.id})">Eliminar</button>
+            <p>${product?.name}</p>
+            <p>$ ${product?.price}</p>
+            <p>Cantidad: <span id="amount">${product?.amount}</span></p>
+            <button class="delete-btn" onclick="deleteFromCart(${product?.id})">Eliminar</button>
         `;
         cartContainer.appendChild(div);
 

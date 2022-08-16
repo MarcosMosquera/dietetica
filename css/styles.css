@@ -1,5 +1,13 @@
+/* TIPOGRAFÍA NUNITO DE GOOGLE FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700&display=swap");
 
+/* VARIABLES */
+:root {
+	--primary-color: #5b6;
+	--button-padding: 10px 15px;
+}
+
+/* FORMATEO */
 * {
 	margin: 0;
 	padding: 0;
@@ -11,17 +19,25 @@
 	font-family: "Nunito", sans-serif;
 }
 
+/* GENERALES
+   ================================================================================================================ */
 .container {
 	padding: 0 80px;
 }
 
+section {
+	padding: 80px 0;
+}
+
+/* HEADER
+   ================================================================================================================ */
 .navContainer,
 .header-ul {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
-	background-color: #5b6;
+	background-color: var(--primary-color);
 
 	padding: 10px 0;
 }
@@ -65,6 +81,8 @@
 	background-attachment: fixed;
 }
 
+/* CARDS DE LOS PRODUCTOS
+   ================================================================================================================ */
 .products {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -72,14 +90,59 @@
 	gap: 100px;
 }
 
+.product {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	text-align: center;
+	width: 300px;
+	height: 350px;
+
+	transition: box-shadow 0.1s;
+
+	cursor: pointer;
+}
+
+.product:hover {
+	box-shadow: 0 0 15px 0 #aaa;
+}
+
 .product__img {
-	width: 100%;
+	margin-top: 20px;
+	width: 80%;
 	object-fit: cover;
 }
 
-section {
-	padding: 80px 0;
+.product__price {
+	color: var(--primary-color);
 }
+
+.add-button {
+	color: #fff;
+	font-size: 15px;
+
+	background-color: var(--primary-color);
+
+	border: none;
+	padding: var(--button-padding);
+	margin: 20px 0;
+
+	cursor: pointer;
+
+	transition: filter 0.1s;
+}
+
+.add-button:hover {
+	filter: brightness(1.2);
+}
+
+.add-button:active {
+	filter: brightness(1.5);
+}
+
+/* CARRITO
+   ================================================================================================================ */
 
 #cart-container {
 	display: grid;
