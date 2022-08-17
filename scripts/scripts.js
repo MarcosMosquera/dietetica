@@ -37,6 +37,7 @@ productStock?.forEach((product) => {
     const div = document.createElement('div');
     // Al div le agrego un class existente
     div.classList.add('product');
+    div.setAttribute('data-aos', 'fade-up');
     // Inyecto HTML
     div.innerHTML = `
         <div class="product__img-container">
