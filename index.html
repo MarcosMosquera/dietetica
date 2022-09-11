@@ -5,6 +5,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+		<!-- FONT AWESOME PARA ÍCONOS -->
+		<script
+			src="https://kit.fontawesome.com/1b49c556dc.js"
+			crossorigin="anonymous"
+		></script>
+
 		<!-- CSS DE LA LIBRERÍA DATA AOS -->
 		<link
 			href="https://unpkg.com/aos@2.3.1/dist/aos.css"
@@ -18,23 +24,43 @@
 	</head>
 
 	<body>
+		<div class="modal-container" id="modal_container">
+			<div class="modal">
+				<div class="button-container">
+					<button id="close">
+						<i class="fa-solid fa-xmark"></i>
+					</button>
+				</div>
+
+				<h3 class="modal__title">Carrito</h3>
+
+				<div id="cart-container"></div>
+				<div class="total-price">
+					<h3>Precio total: $ <span id="total-price">0</span></h3>
+				</div>
+			</div>
+		</div>
+
 		<header class="header">
 			<div class="navContainer">
 				<p class="logo"><a href="index.html">Dietética</a></p>
-				<form class="searchBar">
+				<form class="search">
 					<input
+						class="search__bar"
 						type="search"
 						name="search"
-						id=""
-						placeholder="¿Qué estás buscando?"
+						id="search"
+						placeholder="Buscar en tiempo real..."
 					/>
-					<button type="submit">Buscar</button>
+					<button class="search__button" type="submit">
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
 				</form>
 
 				<ul class="header-ul">
-					<li class="header-ul__li"><a href="#">Ayuda</a></li>
+					<li class="header-ul__li"><a href="#">Nuestro local</a></li>
 					<li class="header-ul__li">
-						<a href="pages/cart.html"
+						<a id="open" href="#"
 							>Carrito (<span id="cart-count">0</span>)</a
 						>
 					</li>
@@ -45,17 +71,16 @@
 			<div>
 				<ul class="nav-ul">
 					<li class="nav-ul__li">
-						<a href="#">Alimentos naturales</a>
-					</li>
-					<li class="nav-ul__li"><a href="#">Despensa</a></li>
-					<li class="nav-ul__li">
-						<a href="#">Bebidas e infusiones</a>
+						<a href="#1">Alimentos naturales</a>
 					</li>
 					<li class="nav-ul__li">
-						<a href="#">Cosmética y cuidado de salud</a>
+						<a href="#8">Bebidas e infusiones</a>
 					</li>
 					<li class="nav-ul__li">
-						<a href="#">Suplementos naturales</a>
+						<a href="#16">Cosmética y cuidado de salud</a>
+					</li>
+					<li class="nav-ul__li">
+						<a href="#23">Suplementos naturales</a>
 					</li>
 				</ul>
 			</div>
@@ -65,18 +90,31 @@
 			<div class="imgContainer">
 				<div class="wallpaper"></div>
 			</div>
+			<h2 class="category">Productos</h2>
 
 			<section class="products-section">
 				<div class="products container" id="productsContainer"></div>
 			</section>
-
-			<section>
-				<div class="container" id="cart-container"></div>
-				<div class="container total-price">
-					<h2>Precio total: $ <span id="total-price">0</span></h2>
-				</div>
-			</section>
 		</main>
+
+		<footer class="footer container">
+			<div class="footer__nav">
+				<ul class="footer-ul">
+					<li class="footer-li">
+						<a href="#1">Alimentos naturales</a>
+					</li>
+					<li class="footer-li">
+						<a href="#8">Bebidas e infusiones</a>
+					</li>
+					<li class="footer-li">
+						<a href="#16">Cosmética y cuidado de salud</a>
+					</li>
+					<li class="footer-li">
+						<a href="#23">Suplementos naturales</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
 
 		<!-- SCRIPT E INICIALIZACIÓN DE LIBRERÍA DATA AOS PARA ANIMACIONES EN SCROLL -->
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
